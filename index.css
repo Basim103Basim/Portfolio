@@ -29,7 +29,7 @@ section{
     margin-left: 10px;
     margin-right: 10px;
     padding:20px;
-    margin-top: 10px;
+    margin-top: 5vh;
     height: 60vh;
 }
 /*all ends*/
@@ -90,7 +90,7 @@ footer{
     color: white;
     font-weight: 700;
     padding-top: 3vh;
-    margin-top: 3vh;
+    margin-top: 5vh;
     text-align: center;
     font-size: 0.7rem;
     height: 20vh;
@@ -151,3 +151,42 @@ button:active{
     scale: 1.2;
 }
 /*Contacts ends*/
+/*big screen starts*/
+@media (min-width:767px){
+    #hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+    }
+    img{
+        height: 50vh;
+        width: auto;
+    }
+    nav{
+        grid-area: nav;
+    }
+    #About{
+        grid-area: About;
+    }
+    #Education{
+        grid-area: Education;
+    }
+    #Projects{
+        grid-area: Projects;
+    }
+    #Skills{
+        grid-area: Skills;
+    }
+    #Contact{
+        grid-area: Contact;
+        justify-self: center;
+        width: 50%;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "About Education" "Projects Skills" "Contact Contact";
+    }
+}
+/*big screen ends*/
